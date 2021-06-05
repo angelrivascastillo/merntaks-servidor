@@ -15,7 +15,7 @@ app.use(cors())
 // habilitar express.json()
 app.use(express.json({ extended: true }))
 // configuar pueerto 
-const PORT = process.env.PORT || 4000
+const port = process.env.port || 4000
 
 // importar rutas
 app.use('/api/usuarios', require('./routes/usuarios'))
@@ -27,6 +27,6 @@ app.use('/api/tareas', require('./routes/tarea.routes'))
 
 
 // ejecutar Servidor 
-app.listen(PORT, () => {
-    console.log(`servifor ejecutandose en el puerto ${PORT}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`servifor ejecutandose en el puerto ${port}`);
 })
