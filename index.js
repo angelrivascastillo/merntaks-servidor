@@ -9,7 +9,19 @@ const app = express()
 conectarDb()
 
 // habilitar cors 
-app.use(cors())
+const config = {
+    application: {
+        cors: {
+            server: [
+                {
+                    origin: "https://nifty-lamport-1ee75c.netlify.app/", //servidor que deseas que consuma o (*) en caso que sea acceso libre
+                    credentials: true
+                }
+            ]
+        }
+    }
+}
+app.use(cors(config.application.cors.server))
 
 
 // habilitar express.json()
