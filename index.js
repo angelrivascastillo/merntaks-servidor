@@ -34,6 +34,7 @@ app.use('/api/usuarios', require('./routes/usuarios'))
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/proyectos', require('./routes/proyecto.route'))
 app.use('/api/tareas', require('./routes/tarea.routes'))
+app.use('/api/home', require('./routes/home.route'))
 
 
 
